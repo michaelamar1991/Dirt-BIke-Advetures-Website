@@ -122,12 +122,7 @@ $("#run-search").click(function(event) {
       );
     } else {
       $.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${userInput}&key=AIzaSyCoxgeV06M15Vcxj5i-SD89TJxPQYl3nIM`
-      ).then(function(response) {
-        latitude = response.results[0].geometry.location.lat;
-        longitude = response.results[0].geometry.location.lng;
-        const params = $.param({
-          key: "200460387-e5b1d616b3250f62fab9619fc65bde2d",
+        //GoogleMaps api key here//
           lat: latitude,
           lon: longitude
         });
@@ -318,7 +313,7 @@ $("#send").on("click", function(e) {
   const message = encodeURI($("#message").val());
   const subject = encodeURI(`${name} Says.. Your Website Rocks!!!!`);
 
-  const hrefText = `mailto:ivansito87@gmail.com?cc=ceceliacreates@gmail.com&bcc=tonjaps3@gmail.com&subject=${subject}&body=${message}`;
+  const hrefText = `mailto:mik.amar91@gmail.com&subject=${subject}&body=${message}`;
   window.location.href = hrefText;
 });
 
